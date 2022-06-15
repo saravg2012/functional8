@@ -7,8 +7,6 @@ import java.util.List;
 public class ReverseArray {
     public static void main(String[] args) {
         reverseArray(new int[] {10,20,30,40,50});
-
-
     }
 
     private static void reverseArray(int[] inputArray) {

@@ -6,11 +6,19 @@ public class Student {
     private String subject;
     private double percentage;
 
+    public Student(String name) {
+        this.name = name;
+    }
+
     public Student(String name, int id, String subject, double percentage) {
         this.name = name;
         this.id = id;
         this.subject = subject;
         this.percentage = percentage;
+    }
+
+    public void printMyName(Student s) {
+        System.out.println(this.name);
     }
 
     public String getName() {
