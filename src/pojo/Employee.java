@@ -7,11 +7,13 @@ public class Employee {
     private String name;
     private int age;
     private double salary;
+    private String dept;
 
-    public Employee(String name, int age, double salary) {
+    public Employee(String name, int age, double salary, String dept) {
         this.name = name;
         this.age = age;
         this.salary = salary;
+        this.dept = dept;
     }
 
     public String getName() {
@@ -38,13 +40,13 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", salary=" + salary +
-                '}';
+
+    public String getDept() {
+        return dept;
+    }
+
+    public void setDept(String dept) {
+        this.dept = dept;
     }
 
     @Override
@@ -52,11 +54,21 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return age == employee.age && Double.compare(employee.salary, salary) == 0 && Objects.equals(name, employee.name);
+        return age == employee.age && Double.compare(employee.salary, salary) == 0 && Objects.equals(name, employee.name) && Objects.equals(dept, employee.dept);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, salary);
+        return Objects.hash(name, age, salary, dept);
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", dept='" + dept + '\'' +
+                '}';
     }
 }

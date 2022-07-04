@@ -9,10 +9,10 @@ import java.util.stream.Collectors;
 public class IncreaseSalaryBy10Precentage {
     public static void main(String[] args) {
         List<Employee> employeeList =  new ArrayList<>();
-        employeeList.add(new Employee("John",26,25000));
-        employeeList.add(new Employee("David",23,12000));
-        employeeList.add(new Employee("Peter",28,14000));
-        employeeList.add(new Employee("mark",18,10000));
+        employeeList.add(new Employee("John",26,25000,"Science"));
+        employeeList.add(new Employee("David",23,12000,"Science"));
+        employeeList.add(new Employee("Peter",28,14000,"Science"));
+        employeeList.add(new Employee("mark",18,10000,"Science"));
 
         System.out.println(employeeList);
 
